@@ -1,0 +1,7 @@
+/target/
+/test-output/
+/surefire-reports/
+/extent-test-output/
+/.idea/
+/reports/
+*.iml
