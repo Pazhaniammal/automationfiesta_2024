@@ -1,22 +1,15 @@
 package lib.selenium;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-
 import io.restassured.RestAssured;
 import lib.browserfactory.BrowserFactory;
 import lib.browserfactory.BrowserType;
 import lib.utils.ConfigUtil;
 import lib.utils.DataInputProvider;
 import lib.utils.HTMLReporter;
+import org.testng.annotations.*;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class PreAndPost extends WebDriverServiceImpl{
 	
@@ -51,8 +44,9 @@ public class PreAndPost extends WebDriverServiceImpl{
 			driver = BrowserFactory.createBrowser(BrowserType.CHROME,URL);
 		else if(browser.equalsIgnoreCase("edge"))
 			driver = BrowserFactory.createBrowser(BrowserType.EDGE,URL);
-		
-		
+		else if(browser.equalsIgnoreCase("firefox"))
+			driver = BrowserFactory.createBrowser(BrowserType.FIREFOX,URL);
+
         String username = ConfigUtil.getProperty("username");
         String password = decryptPassword(ConfigUtil.getProperty("password"));
         String resources = ConfigUtil.getProperty("resources");

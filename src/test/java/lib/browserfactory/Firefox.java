@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class Firefox implements Browser{
 
     private static final Logger logger = Logger.getLogger(Chrome.class.getName());
-    public String hubURL = "http://174.129.75.192:4445/";
+    public String hubURL = "http://3.89.242.215:4445";
     private RemoteWebDriver driver;
 
     @Override

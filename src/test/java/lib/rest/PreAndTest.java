@@ -1,29 +1,15 @@
 package lib.rest;
 
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
-
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-
-import com.aventstack.extentreports.ExtentTest;
-
 import io.restassured.RestAssured;
 import lib.utils.ConfigUtil;
 import lib.utils.DataInputProvider;
 import lib.utils.HTMLReporter;
+import org.testng.annotations.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class PreAndTest extends HTMLReporter{
 	

@@ -2,17 +2,17 @@
 
 <suite name="Suite">
 	<test name="Test">
-		<parameter name="env" value="qa" />
+		<parameter name="env" value="dev" />
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="tests.selenium.TC003_CreateIncidentUsingRestAndVerifyUsingSelenium" />
 		</classes>
 	</test>
-<!--	<test name="Test1">-->
-<!--		<parameter name="env" value="qa" />-->
-<!--		<parameter name="browser" value="firefox" />-->
-<!--		<classes>-->
-<!--			<class name="tests.selenium.TC001_CreateIncident2" />-->
-<!--        </classes>-->
-<!--	</test>-->
+	<test name="Test1">
+		<parameter name="env" value="dev" />
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="tests.selenium.TC001_CreateIncident2" />
+        </classes>
+	</test>
 </suite>
